@@ -50,3 +50,18 @@ let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 
 console.log("Authentication Status:", authenticationStatus);
+
+let orgUserRole = "Employee";
+let orguserAccess;
+
+if (orgUserRole === "Employee"){
+    orguserAccess = "You have access to Dietary Services";
+} else if (orgUserRole === "Enrolled Member"){
+    orguserAccess = "You have access to Dietary Services and one-to-one interaction with a dietician";
+} else if (orgUserRole === "Subscriber"){
+    orguserAccess = "You have partial acces to facilitate Dietary Services only";
+} else {
+    orguserAccess = "You need to enroll or at least subscribe first to avail this facility";
+}
+
+console.log("Hi User,", orguserAccess);
